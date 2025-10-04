@@ -39,3 +39,19 @@ else if(amount > 9000 ) dis = 20;
 else console.log("Invalid amount");
  
 console.log("Discounted price is: " + (amount - (amount * dis / 100)));
+
+
+// third method using ternary operator
+
+
+let amount1 = Number(prompt("Enter the original price: "));
+let dis1 = (amount1 >= 0 && amount1 <= 5000) ? 0 : (amount1 > 5000 && amount1 <= 7000) ? 5 : (amount1 > 7000 && amount1 <= 9000) ? 10 : (amount1 > 9000) ? 20 : -1;
+if(dis1 === -1) console.log("Invalid amount");
+else console.log("Discounted price is: " + (amount1 - (amount1 * dis1 / 100)));
+
+
+// check if a number is positive, negative or zero
+
+let num = Number(prompt("Enter a number: "));
+let result = (num > 0) ? "Positive" : (num < 0) ? "Negative" : "Zero";
+console.log(result);
