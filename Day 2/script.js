@@ -227,3 +227,13 @@ if(a + b <=c || a + c <= b || b + c <= a){
 /* let radius = Number(prompt("Enter the radius of the circle: "));
 let circumference = 2 * Math.PI * radius;
 console.log("The circumference of the circle is: " + circumference.toFixed(2)); */
+
+
+
+
+
+
+
+
+
+
