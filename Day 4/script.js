@@ -20,7 +20,7 @@ checkVotingEligibility(16); // "Not eligible to vote" */
 
 // Create a function to check if a number is even or odd.
 
-
+/* 
 function checkEvenOdd(number) {
     if(number % 2 === 0){
         console.log("Even Number");
@@ -32,3 +32,23 @@ function checkEvenOdd(number) {
 
 checkEvenOdd(4); // "Even Number"
 checkEvenOdd(7); // "Odd Number"
+
+ */
+
+//Loops 
+
+for (let i = 0; i <= 5; i++) {
+    console.log('Hello World');
+}
+
+// Print numbers from 1 to 10
+for(let i=1; i<=10; i++){
+    console.log(i);
+}
+
+// Print numbers from 10 to 1
+for(let i=10; i>=1; i--){
+    console.log(i);
+}
+
+
