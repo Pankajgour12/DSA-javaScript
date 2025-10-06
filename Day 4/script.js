@@ -36,7 +36,7 @@ checkEvenOdd(7); // "Odd Number"
  */
 
 //Loops 
-
+/* 
 for (let i = 0; i <= 5; i++) {
     console.log('Hello World');
 }
@@ -49,6 +49,56 @@ for(let i=1; i<=10; i++){
 // Print numbers from 10 to 1
 for(let i=10; i>=1; i--){
     console.log(i);
+} */
+
+//-- Loop
+// for loop
+
+//Q. Accept an integer and Print hello world n times 
+
+/* let n = Number(prompt("Enter a number: "));
+if(isNaN(n) || n <= 0){
+    console.log("Invalid Input");
+}else{
+  let i;
+for( i=1; i<=n; i++){
+    console.log("Hello World");
 }
+
+
+} */
+
+
+//Q. Print natural number up to n.
+
+/*  let n = Number(prompt("Enter a number: "));
+ if(isNaN(n) || n <= 0){  
+    console.log("Invalid Input");
+ }else{
+    let i;
+    for(i=1; i<=n; i++){
+        console.log(i);
+      }
+    } */
+
+//Q. reverse for loop. n to 1.
+
+
+
+/*  let n = Number(prompt("Enter a number: "));
+if(isNaN(n) || n <= 0){
+    console.log("Invalid Input");
+}else{
+   
+    for(;n>=1; n--){
+        console.log(n);
+    }
+}  */
+
+
+
+
+
+
 
 
