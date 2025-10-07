@@ -28,7 +28,7 @@ for(let i = 1; i <= n/2; i++) {
     } } */
 
 
-        // Q.check if the number is prime or not.
+ /*        // Q.check if the number is prime or not.
 let n = Number(prompt("Enter a number: "));
 let isPrime = true;
 for(let i = 2; i <= n/2; i++) {
@@ -40,7 +40,34 @@ if(isPrime) {
     console.log(`${n} is a prime number`);
 } else {
     console.log(`${n} is not a prime number`);
+} */
+
+
+//Q. method second 
+
+let n = Number(prompt("Enter a number: "));
+let isPrime = isPrimeNumber(n);
+if(isPrime) {
+    console.log(`${n} is a prime number`);
+} else {
+    console.log(`${n} is not a prime number`);
 }
+
+function isPrimeNumber(num) {
+    if(num <= 1) return false; // 0 and 1 are not prime numbers
+    if(num === 2) return true; // 2 is the only even prime number
+    if(num % 2 === 0) return false; // other even numbers are not prime
+
+    for(let i = 3; i <= Math.floor(Math.sqrt(num)); i += 2) { // check only odd numbers up to the square root of num
+        if(num % i === 0) {
+            return false;
+        }
+    }
+    return true;
+}  
+
+
+
 
 
 
