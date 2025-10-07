@@ -95,7 +95,46 @@ if(isNaN(n) || n <= 0){
     }
 }  */
 
+    //Q. Take a number and print its multiplication table.
 
+/*  let n = Number(prompt("Enter a number: "));
+  if(isNaN(n) || n <= 0){
+    console.log("Invalid Input");
+  }else{
+    let i;
+    for(i=1; i<=10; i++){
+        console.log(`${n} * ${i} = ${n*i}`);
+    }
+  }
+ */
+
+  //Q. Sum of n Terms 
+
+/*  let n = Number(prompt("Enter a number: "));
+ if(isNaN(n) || n <= 0){
+    console.log("Invalid Input");
+ }else{
+  let sum = 0;
+  for(let i=1; i<=n; i++){
+    sum += i; // sum = sum + i
+  }
+  console.log("Sum of first " + n + " natural numbers is: " + sum);
+} */
+
+
+
+  //Q. Factorial of a number.
+
+  let n = Number(prompt("Enter a number: "));
+  if(isNaN(n) || n < 0){
+    console.log("Invalid Input");
+  }else{
+    let factorial = 1;
+    for(let i=1; i<=n; i++){
+      factorial *= i; // factorial = factorial * i
+    }
+    console.log("Factorial of " + n + " is: " + factorial);
+  }
 
 
 
