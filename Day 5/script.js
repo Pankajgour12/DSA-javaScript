@@ -45,7 +45,7 @@ if(isPrime) {
 
 //Q. method second 
 
-let n = Number(prompt("Enter a number: "));
+/* let n = Number(prompt("Enter a number: "));
 let isPrime = isPrimeNumber(n);
 if(isPrime) {
     console.log(`${n} is a prime number`);
@@ -65,9 +65,34 @@ function isPrimeNumber(num) {
     }
     return true;
 }  
+ */
 
 
 
+
+//! Sum of digits of a number
+/* 
+let = n = Number(prompt("Enter a number: "));
+let sum = 0;
+
+while(n > 0) {
+    let digit = n % 10; 
+    sum += digit;
+    n = Math.floor(n / 10); 
+}
+console.log(`The sum of the digits is: ${sum}`);    
+ */
+
+//! Reverse a number
+
+ let n = Number(prompt("Enter a number: "));
+let reversedNumber = 0;
+while(n > 0) {
+    let digit = n % 10;
+    reversedNumber = reversedNumber * 10 + digit;
+    n = Math.floor(n / 10);
+}
+console.log(`The reversed number is: ${reversedNumber}`);    
 
 
 
