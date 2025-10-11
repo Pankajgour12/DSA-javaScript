@@ -85,14 +85,30 @@ console.log(`The sum of the digits is: ${sum}`);
 
 //! Reverse a number
 
- let n = Number(prompt("Enter a number: "));
+/*  let n = Number(prompt("Enter a number: "));
 let reversedNumber = 0;
 while(n > 0) {
     let digit = n % 10;
     reversedNumber = reversedNumber * 10 + digit;
     n = Math.floor(n / 10);
 }
-console.log(`The reversed number is: ${reversedNumber}`);    
+console.log(`The reversed number is: ${reversedNumber}`);
+ */
+//! Automorphic Number
+
+let n = Number(prompt("Enter a Number "));
+let copy =n;
+let sq = n*n;
+let count =0;
+while(n>0){
+count++;
+n= Math.floor(n/10);
+
+}
+
+if(sq%Math.pow(10, count )==copy) console.log("Automorphic Number");
+else console.log("No Automorphic Number");
+
 
 
 
