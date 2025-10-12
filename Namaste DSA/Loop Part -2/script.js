@@ -35,7 +35,7 @@ if (result !== -1) {
 
 //! Write a function that returns the number of negative numbers in an array 
 // Step 1: Take array input from user
-let input = prompt("Enter array elements (space separated):");
+/* let input = prompt("Enter array elements (space separated):");
 
 // Step 2: Convert string to number array
 let arr = input.split(" ").map(Number);
@@ -70,6 +70,43 @@ alert(
 );
 
 
+ */
+
+
+//! Largest Number in array 
+// Step 1️⃣: User se input lena
+let input = prompt("Enter numbers separated by spaces:");
+
+// Step 2️⃣: String ko array me convert karna aur Number me badalna
+let arr = input.split(" ").map(Number);
+
+// Step 3️⃣: Function define karna jo largest element find kare
+function findLargestNumber(arr) {
+
+  // Edge case: agar array empty hai
+  if (arr.length === 0) {
+    return "Array is empty!";
+  }
+
+  // Step 4️⃣: Assume first element is largest initially
+  let largest = arr[0];
+
+  // Step 5️⃣: Loop through array
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      largest = arr[i];  // agar current element bada hai to update karo
+    }
+  }
+
+  // Step 6️⃣: Loop complete hone ke baad largest return karo
+  return largest;
+}
+
+// Step 7️⃣: Function call karo aur result store karo
+let result = findLargestNumber(arr);
+
+// Step 8️⃣: Result print karo
+console.log("The largest number in the array is:", result);
 
 
 
