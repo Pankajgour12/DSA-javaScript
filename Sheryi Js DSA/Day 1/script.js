@@ -88,17 +88,17 @@ console.log("The sum of " + a + " and " + b + " is " + (a+b)); // The sum of 5 a
 // Que.4
 /* 
  type coercion in JS
-// 1. Implicit Coercion : JS automatically converts the data type of one value to another data type.
-// 2. Explicit Coercion: We can explicitly convert the data type of one value to another data type.
+ 1. Implicit Coercion : JS automatically converts the data type of one value to another data type.
+ 2. Explicit Coercion: We can explicitly convert the data type of one value to another data type.
 
-// Implicit Coercion example
+ Implicit Coercion example
 let a = 5;
 let b = "3";
 console.log(a+b); // 53
 console.log(a-b); // 2
 console.log(a*b); // 15
 
-// Explicit Coercion example
+ Explicit Coercion example
 let a = 5;
 let b = "3";
 console.log(a+parseInt(b)); // 8
