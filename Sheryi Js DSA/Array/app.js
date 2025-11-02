@@ -1,3 +1,4 @@
+let prompt = require("prompt-sync")();
 // Q. Sum of all elements in an array
 
 /* let prompt = require("prompt-sync")();
@@ -37,7 +38,7 @@ console.log(`Maximum element in array is ${max}`);
 
 
 // Q. Find minimum element in an array
-
+/* 
 let prompt = require("prompt-sync")();
 let size = Number(prompt("Enter size of array "));
 let arr = new Array(size);
@@ -52,9 +53,41 @@ for (let i = 1; i < size; i++) {
   }   
 }
 console.log(`Minimum element in array is ${min}`);
-  
+   */
 
 
+//! Q. Find the largest  number in an array
+/* 
+let size = Number(prompt("Enter size of array "));
+let arr = new Array(size);
 
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = Number(prompt(`Enter element at index ${i} : `));
+}
 
+let max = arr[0];
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] > max) {
+    max = arr[i];     
+  }
+}
+console.log(`Largest element in array is ${max}`);  
+ */
+
+//! find the smallest number in an array
+/*  
+let size = Number(prompt("Enter size of array "));
+let arr = new Array(size);
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = Number(prompt(`Enter element at index ${i} : `));
+}
+
+let min = arr[0];
+for (let i = 1; i < arr.length; i++) {
+  if (arr[i] < min) {
+    min = arr[i];
+  }
+} 
+console.log(`Smallest element in array is ${min}`);
+ */
 
