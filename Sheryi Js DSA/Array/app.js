@@ -91,7 +91,7 @@ for (let i = 1; i < arr.length; i++) {
 console.log(`Smallest element in array is ${min}`);
  */
 
-//! Reverse an array with exotra space
+//! Reverse an array with extra space
 
 let size = Number(prompt("Enter size of array "));
 let arr = new Array(size);
@@ -99,7 +99,7 @@ for (let i = 0; i < arr.length; i++) {
   arr[i] = Number(prompt(`Enter element at index ${i} : `));
 }
 
-let revArr = new Array(arr.length);
+/* let revArr = new Array(arr.length);
 let j= 0;
 for (let i = arr.length - 1; i >= 0; i--) {
   revArr[j] = arr[i];
@@ -107,5 +107,51 @@ for (let i = arr.length - 1; i >= 0; i--) {
 }
 
 console.log("Reversed Array is :"+revArr);
- 
+  */
+
+
+/* let i = 0;
+let j = arr.length - 1;
+
+while (i < j) { 
+
+  arr[i] = arr[i] + arr[j];
+  arr[j] = arr[i] - arr[j];
+  arr[i] = arr[i] - arr[j];
+  i++;
+  j--;
+}
+
+
+console.log("Reversed Array is :" + arr); */
+
+
+let temp = arr[0];
+
+for (let i = 0; i < arr.length-1; i++) {
+  arr[i] = arr[i+1];
+  arr[i+1] = temp;
+  temp = arr[i+1];
+
+}
+
+console.log("Reversed Array is :" + arr);
+
+
+//! move all 0's to the end of array
+
+let i = 0;
+let j = 0;
+
+while (j < arr.length) {
+  if (arr[j] !== 0) {
+    // swap
+    arr[i] = arr[i] + arr[j];
+    arr[j] = arr[i] - arr[j];
+    arr[i] = arr[i] - arr[j];
+    i++;
+  } 
+  j++;
+}
+console.log("Array after moving 0's to the end :"+arr);
 
