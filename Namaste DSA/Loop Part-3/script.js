@@ -31,6 +31,11 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(arr);
 
+if(size < 2){
+    console.log("Array should have at least two elements to find second largest.");
+    process.exit(1);
+}
+
 
 let firstLargest = -Infinity;
 let secondLargest = -Infinity;
