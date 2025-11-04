@@ -125,7 +125,7 @@ while (i < j) {
 
 console.log("Reversed Array is :" + arr); */
 
-
+/* 
 let temp = arr[0];
 
 for (let i = 0; i < arr.length-1; i++) {
@@ -135,12 +135,12 @@ for (let i = 0; i < arr.length-1; i++) {
 
 }
 
-console.log("Reversed Array is :" + arr);
+console.log("Reversed Array is :" + arr); */
 
 
 //! move all 0's to the end of array
 
-let i = 0;
+/* let i = 0;
 let j = 0;
 
 while (j < arr.length) {
@@ -155,3 +155,17 @@ while (j < arr.length) {
 }
 console.log("Array after moving 0's to the end :"+arr);
 
+ */
+
+//! Rotate an array by k times
+let k = Number(prompt("Enter number of times to rotate the array "));
+k = k % arr.length; 
+for (let r = 0; r < k; r++) {
+  let temp = arr[0];
+  for (let i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+    arr[i + 1] = temp;
+    temp = arr[i + 1];
+  }     
+}
+console.log("Array after rotating by k times :"+arr);
