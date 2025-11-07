@@ -1,0 +1,14 @@
+
+const prompt = require('prompt-sync')();
+
+let n = Number(prompt("Enter number  "));
+
+for(let i = 0; i<n ; i++ ){
+    let row = " "
+    for(let j=0 ; j<=i ; j++){
+        // process.stdout.write("* ")
+        row = row +"* "
+    }
+    console.log(row);
+}
+
