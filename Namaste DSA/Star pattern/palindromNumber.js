@@ -4,7 +4,7 @@ const prompt = require ('prompt-sync')();
 let num = Number(prompt("Enter the number : "));
 
 
-function palindromNumber(num) {
+/*  function palindromNumber(num) {
 let xCopy = num;
 if(num<0) return false;
 
@@ -27,7 +27,7 @@ if(xCopy === rev){
 }
 
 
-}
+} */ 
 
 
 
