@@ -158,7 +158,7 @@ console.log("Array after moving 0's to the end :"+arr);
  */
 
 //! Rotate an array by k times
-let k = Number(prompt("Enter number of times to rotate the array "));
+/* let k = Number(prompt("Enter number of times to rotate the array "));
 k = k % arr.length; 
 for (let r = 0; r < k; r++) {
   let temp = arr[0];
@@ -169,3 +169,30 @@ for (let r = 0; r < k; r++) {
   }     
 }
 console.log("Array after rotating by k times :"+arr);
+ */
+
+
+
+
+//! Linear Search in Array 
+
+
+ let key = Number(prompt("Enter element to search in array ")); 
+  
+ function linearSearch(arr , key){
+ let foundAt = -1;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === key) {
+      foundAt = i;
+      break;
+    }
+  }
+  if (foundAt !== -1) {
+    console.log(`Element ${key} found at index ${foundAt}`);
+  } else {
+    console.log(`Element ${key} not found in array`);
+  }
+
+}     
+
+linearSearch(arr,key);
