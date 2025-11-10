@@ -93,11 +93,11 @@ console.log(`Smallest element in array is ${min}`);
 
 //! Reverse an array with extra space
 
-let size = Number(prompt("Enter size of array "));
+/* let size = Number(prompt("Enter size of array "));
 let arr = new Array(size);
 for (let i = 0; i < arr.length; i++) {
   arr[i] = Number(prompt(`Enter element at index ${i} : `));
-}
+} */
 
 /* let revArr = new Array(arr.length);
 let j= 0;
@@ -177,16 +177,21 @@ console.log("Array after rotating by k times :"+arr);
 //! Linear Search in Array 
 
 
- let key = Number(prompt("Enter element to search in array ")); 
+//  let key = Number(prompt("Enter element to search in array ")); 
   
- function linearSearch(arr , key){
+/*  function linearSearch(arr , key){
+
  let foundAt = -1;
-  for (let i = 0; i < arr.length; i++) {
+  /* for (let i = 0; i < arr.length; i++) {
     if (arr[i] === key) {
       foundAt = i;
       break;
     }
-  }
+  } 
+
+
+
+
   if (foundAt !== -1) {
     console.log(`Element ${key} found at index ${foundAt}`);
   } else {
@@ -194,5 +199,84 @@ console.log("Array after rotating by k times :"+arr);
   }
 
 }     
+ */
 
-linearSearch(arr,key);
+
+
+
+//! Binary Search in an Array 
+
+let size = Number(prompt("Enter size of array "));
+let arr = new Array(size);
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = Number(prompt(`Enter element at index ${i} : `));
+}
+
+let target = Number(prompt("Enter element to search in array ")); 
+
+ function binarySearch(arr, target) {
+  let start = 0;  //  Search Start
+  let end = arr.length - 1; // Search End
+
+  while(start <= end ){      // jab tak valid range hai
+    let mid = Math.floor((start + end)/2);  // mid index 
+
+    if(arr[mid] === target){        // target found
+      return mid;
+    }
+    else if(arr[mid]<target){  // agar target bada hai mid se 
+      start = mid + 1;
+
+    }
+    else{       // agar target chota he mid se 
+      end = mid - 1;
+    }
+
+
+    }
+
+
+
+  } 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+  let result = binarySearch(arr , target);
+  if(result !== undefined){
+    console.log(`Element ${target} found at index ${result}`);
+  } else {
+    console.log(`Element ${target} not found in array`);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
