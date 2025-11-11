@@ -214,7 +214,7 @@ for (let i = 0; i < arr.length; i++) {
 
 let target = Number(prompt("Enter element to search in array ")); 
 
- function binarySearch(arr, target) {
+ /* function binarySearch(arr, target) {
   let start = 0;  //  Search Start
   let end = arr.length - 1; // Search End
 
@@ -237,9 +237,8 @@ let target = Number(prompt("Enter element to search in array "));
 
 
 
-  } 
- 
-
+  }  */
+  
 
 
 
