@@ -1,35 +1,45 @@
 
-const prompt = require('prompt-sync')();
+//! Remove Dupticate in Sorted array 
 
+// Import prompt-sync so we can take input from user in VS Code terminal
+const prompt = require("prompt-sync")();
+
+// Step 1: Take array input
 const size = Number(prompt("Enter the size of the array: "));
+const nums = new Array(size);
 
-const arr = new Array(size);
 for (let i = 0; i < size; i++) {
-    arr[i] = Number(prompt(`Enter element ${i + 1}: `));
-}
-console.log("The elements of the array are:");
-for (let i = 0; i < size; i++) {
-    console.log(arr[i]);
+  nums[i] = Number(prompt(`Enter element ${i + 1}: `));
 }
 
-//! Remove Duplicates From Sorted Array
-function removeDuplicates(arr) {
-    if (arr.length === 0) return 0;
-    let uniqueIndex = 1;
-    for (let i = 1; i < arr.length; i++) {
-        if (arr[i] !== arr[i - 1]) {
-            arr[uniqueIndex] = arr[i];
-            uniqueIndex++;
-        }
+console.log("\nOriginal Array:", nums);
+
+// Step 2: Function to remove duplicates (LeetCode logic)
+function removeDuplicates(nums) {
+  // If array is empty, return 0
+  if (nums.length === 0) return 0;
+
+  // Pointer 'x' will track the last position of unique elements
+  let x = 0;
+
+  // Loop starts from 1 because first element is always unique
+  for (let i = 1; i < nums.length; i++) {
+    // Since array is sorted, a new unique element is always greater than the last one
+    if (nums[i] > nums[x]) {
+      x++;               // Move pointer forward
+      nums[x] = nums[i]; // Place new unique element
     }
-    return uniqueIndex;
+
+   
+  }
+
+  // Return count of unique elements
+  return x + 1;
 }
-const sortedArr = arr.slice().sort((a, b) => a - b);
-const newLength = removeDuplicates(sortedArr);
-console.log(`Array after removing duplicates: ${sortedArr.slice(0, newLength)}`);
 
+// Step 3: Call function
+const k = removeDuplicates(nums);
 
-
-
-
-
+// Step 4: Print result
+console.log("\nTotal unique elements:", k);
+console.log("Array after removing duplicates:", nums.slice(0, k));
