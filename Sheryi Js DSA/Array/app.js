@@ -14,7 +14,7 @@ for (let i = 0; i < size; i++) {
 }
 console.log(`Sum of all elements in array is ${sum}`); */
 
-// Q. Find maximum element in an array
+//! Q. Find maximum element in an array
 
 /* let prompt = require("prompt-sync")();
 let size = Number(prompt("Enter size of array "));
@@ -34,7 +34,7 @@ for (let i = 1; i < size; i++) {
 console.log(`Maximum element in array is ${max}`);
  */
 
-// Q. Find minimum element in an array
+//! Q. Find minimum element in an array
 /* 
 let prompt = require("prompt-sync")();
 let size = Number(prompt("Enter size of array "));
@@ -252,7 +252,7 @@ for (let i = 0; i < arr.length; i++) {
   arr[i] = Number(prompt(`Enter element at index ${i} : `));
 }
 
-function bubbleSort(arr) {
+/* function bubbleSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     for (let j = 0; j < arr.length - i - 1; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -267,4 +267,46 @@ function bubbleSort(arr) {
 }
 
 let sortedArr = bubbleSort(arr);
+console.log("Sorted Array is :" + sortedArr); */
+
+
+
+
+
+
+
+
+
+
+
+
+
+//! Selection sort 
+
+function selectionSort(arr) {
+ 
+  for(let i= 0; i < arr.length - 1; i++){
+        let small = i;
+        for(let j = i + 1; j < arr.length; j++){
+          if(arr[small] > arr[j] ){
+            small = j;
+          }   
+
+
+  }
+  if(small !== i){
+    // swap 
+    arr[i] = arr[i] + arr[small];
+    arr[small] = arr[i] - arr[small];
+    arr[i] = arr[i] - arr[small]
+  }
+
+}
+
+return arr ;
+
+}
+
+let sortedArr = selectionSort(arr);
 console.log("Sorted Array is :" + sortedArr);
+
