@@ -14,8 +14,6 @@ for (let i = 0; i < size; i++) {
 }
 console.log(`Sum of all elements in array is ${sum}`); */
 
-
-
 // Q. Find maximum element in an array
 
 /* let prompt = require("prompt-sync")();
@@ -36,7 +34,6 @@ for (let i = 1; i < size; i++) {
 console.log(`Maximum element in array is ${max}`);
  */
 
-
 // Q. Find minimum element in an array
 /* 
 let prompt = require("prompt-sync")();
@@ -54,7 +51,6 @@ for (let i = 1; i < size; i++) {
 }
 console.log(`Minimum element in array is ${min}`);
    */
-
 
 //! Q. Find the largest  number in an array
 /* 
@@ -109,7 +105,6 @@ for (let i = arr.length - 1; i >= 0; i--) {
 console.log("Reversed Array is :"+revArr);
   */
 
-
 /* let i = 0;
 let j = arr.length - 1;
 
@@ -136,7 +131,6 @@ for (let i = 0; i < arr.length-1; i++) {
 }
 
 console.log("Reversed Array is :" + arr); */
-
 
 //! move all 0's to the end of array
 
@@ -171,14 +165,10 @@ for (let r = 0; r < k; r++) {
 console.log("Array after rotating by k times :"+arr);
  */
 
+//! Linear Search in Array
 
+//  let key = Number(prompt("Enter element to search in array "));
 
-
-//! Linear Search in Array 
-
-
-//  let key = Number(prompt("Enter element to search in array ")); 
-  
 /*  function linearSearch(arr , key){
 
  let foundAt = -1;
@@ -201,20 +191,17 @@ console.log("Array after rotating by k times :"+arr);
 }     
  */
 
+//! Binary Search in an Array
 
-
-
-//! Binary Search in an Array 
-
-let size = Number(prompt("Enter size of array "));
+/* let size = Number(prompt("Enter size of array "));
 let arr = new Array(size);
 for (let i = 0; i < arr.length; i++) {
   arr[i] = Number(prompt(`Enter element at index ${i} : `));
 }
 
 let target = Number(prompt("Enter element to search in array ")); 
-
- /* function binarySearch(arr, target) {
+ */
+/* function binarySearch(arr, target) {
   let start = 0;  //  Search Start
   let end = arr.length - 1; // Search End
 
@@ -238,9 +225,8 @@ let target = Number(prompt("Enter element to search in array "));
 
 
   }  */
-  
 
-
+/* 
 
 
 
@@ -256,26 +242,29 @@ let target = Number(prompt("Enter element to search in array "));
   } else {
     console.log(`Element ${target} not found in array`);
   }
+ */
 
+//! bubble Short
 
+let size = Number(prompt("Enter size of array "));
+let arr = new Array(size);
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = Number(prompt(`Enter element at index ${i} : `));
+}
 
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        arr[j] = arr[j] + arr[j + 1];
+        arr[j + 1] = arr[j] - arr[j + 1];
+        arr[j] = arr[j] - arr[j + 1];
+      }
+    }
+  }
 
+  return arr;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+let sortedArr = bubbleSort(arr);
+console.log("Sorted Array is :" + sortedArr);
