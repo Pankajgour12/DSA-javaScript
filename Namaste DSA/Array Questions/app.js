@@ -43,7 +43,7 @@ const k = removeDuplicates(nums);
 // Step 4: Print result
 console.log("\nTotal unique elements:", k);
 console.log("Array after removing duplicates:", nums.slice(0, k));
-
+ 
  */
 
 
