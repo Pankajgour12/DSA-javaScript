@@ -50,7 +50,7 @@ console.log("Array after removing duplicates:", nums.slice(0, k));
 
 //! Remove Element 
 
-const prompt = require("prompt-sync")();
+/* const prompt = require("prompt-sync")();
 
 // Step 1: Take array input
 const size = Number(prompt("Enter the size of the array: "));
@@ -74,11 +74,53 @@ function removeElement(arr, val) {
   }
 
   return arr.slice(0, k); // <- CLEAN RESULT
-}
+} 
 
 let result = removeElement(arr, val);
 console.log("After Removal:", result);
 
+*/
+
+
+//! Reverse String
+/* 
+const prompt = require("prompt-sync")();
+
+// Step 1: Take string input
+const str = prompt("Enter a string: ");
+const charArray = str.split(''); // Convert string to array of characters
+console.log("\nOriginal String:", str);
+ */
+/*  function reverseString(s) {
+  let x = s.length - 1;
+
+  for (let i = 0; i < s.length / 2; i++) {
+    // Swap characters
+    let temp = s[i];
+    s[i] = s[x];
+    s[x] = temp;
+    x--;
+  }
+ 
+}*/
+/* 
+function reverseString(s) {
+  let x = s.length-1;
+  for(let i = 0; i<s.length/2; i++ ){
+     let temp = s[i];
+     s[i]  = s[x]
+     s[x]   =  temp
+     x--
+
+  }
+
+  return s ;
+}
+
+
+reverseString(charArray);
+
+console.log("Reversed String:", charArray.join('')); */
 
 
 
@@ -86,3 +128,34 @@ console.log("After Removal:", result);
 
 
 
+const prompt = require("prompt-sync")();
+
+// Step 1: Take array input
+const size = Number(prompt("Enter the size of the array: "));
+const price = new Array(size);
+
+for (let i = 0; i < size; i++) {
+  price[i] = Number(prompt(`Enter element ${i + 1}: `));
+}
+
+console.log("\nOriginal Array:", price);
+
+function maxProfite(price){
+ let min = price[0]
+  let maxProfit = 0 ;
+  for(let i =1; i<price.length; i++){
+  if( price[i]-min >maxProfit){
+    maxProfit = price[i]-min
+  }
+  if(price[i]<min){
+    min = price[i]
+  }
+
+  }
+
+  return maxProfit
+
+}
+
+let result = maxProfite(price)
+console.log("Max Profite is :", result);
