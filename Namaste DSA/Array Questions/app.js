@@ -126,36 +126,48 @@ console.log("Reversed String:", charArray.join('')); */
 
 
 
-
+//! Merge Shorted Array  
 
 const prompt = require("prompt-sync")();
-
+ 
 // Step 1: Take array input
-const size = Number(prompt("Enter the size of the array: "));
-const price = new Array(size);
+const size1 = Number(prompt("Enter the size of the first array: "));
+const nums1 = new Array(size1);
 
-for (let i = 0; i < size; i++) {
-  price[i] = Number(prompt(`Enter element ${i + 1}: `));
+for (let i = 0; i < size1; i++) {
+  nums1[i] = Number(prompt(`Enter element ${i + 1} of first array: `));
+}
+const size2 = Number(prompt("Enter the size of the second array: "));
+const nums2 = new Array(size2);
+for (let i = 0; i < size2; i++) {
+  nums2[i] = Number(prompt(`Enter element ${i + 1} of second array: `));
+}
+console.log("\nFirst Array:", nums1);
+console.log("Second Array:", nums2);
+function merge(nums1, m, nums2, n) {
+    let i = m - 1;
+    let j = n - 1;
+    let k = m + n - 1;
+    while (i >= 0 && j >= 0) {
+        if (nums1[i] > nums2[j]) {
+            nums1[k] = nums1[i];
+            i--;
+        } else {
+            nums1[k] = nums2[j];
+            j--;
+        }
+        k--;
+    } 
+    while (j >= 0) {
+        nums1[k] = nums2[j];
+        j--;
+        k--;
+    }
+    return nums1;
 }
 
-console.log("\nOriginal Array:", price);
 
-function maxProfite(price){
- let min = price[0]
-  let maxProfit = 0 ;
-  for(let i =1; i<price.length; i++){
-  if( price[i]-min >maxProfit){
-    maxProfit = price[i]-min
-  }
-  if(price[i]<min){
-    min = price[i]
-  }
+const mergedArray = merge(nums1.concat(new Array(size2).fill(0)), size1, nums2, size2);
+console.log("Merged Array:", mergedArray);
 
-  }
-
-  return maxProfit
-
-}
-
-let result = maxProfite(price)
-console.log("Max Profite is :", result);
+   
