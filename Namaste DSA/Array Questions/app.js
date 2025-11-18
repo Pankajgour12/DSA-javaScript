@@ -130,7 +130,7 @@ console.log("Reversed String:", charArray.join('')); */
 
 const prompt = require("prompt-sync")();
  
-// Step 1: Take array input
+/* // Step 1: Take array input
 const size1 = Number(prompt("Enter the size of the first array: "));
 const nums1 = new Array(size1);
 
@@ -171,3 +171,37 @@ const mergedArray = merge(nums1.concat(new Array(size2).fill(0)), size1, nums2, 
 console.log("Merged Array:", mergedArray);
 
    
+ */
+
+
+
+//! Moves Zeros in right site 
+
+// Step 1: Take array input
+const size = Number(prompt("Enter the size of the array: "));
+const nums = new Array(size);
+
+for (let i = 0; i < size; i++) {
+  nums[i] = Number(prompt(`Enter element ${i + 1}: `));
+}
+
+console.log("\nOriginal Array:", nums);
+
+function moveZeroes(nums) {
+    let k = 0; // Pointer for the next non-zero element
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== 0) {
+            nums[k] = nums[i];
+            k++;
+        }
+    } 
+    for (let i = k; i < nums.length; i++) {
+        nums[i] = 0;
+    }
+    return nums;
+}
+
+moveZeroes(nums);
+console.log("Array after moving zeros:", nums); 
+
+
