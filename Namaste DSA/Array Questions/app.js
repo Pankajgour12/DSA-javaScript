@@ -176,7 +176,7 @@ console.log("Merged Array:", mergedArray);
 
 
 //! Moves Zeros in right site 
-
+/* 
 // Step 1: Take array input
 const size = Number(prompt("Enter the size of the array: "));
 const nums = new Array(size);
@@ -203,5 +203,38 @@ function moveZeroes(nums) {
 
 moveZeroes(nums);
 console.log("Array after moving zeros:", nums); 
+ */
 
+
+
+//! Max Consecutive Ones
+
+
+// Step 1: Take array input
+const size = Number(prompt("Enter the size of the array: "));
+const nums = new Array(size);
+
+for (let i = 0; i < size; i++) {
+  nums[i] = Number(prompt(`Enter element ${i + 1}: `));
+} 
+console.log("\nOriginal Array:", nums);
+
+function findMaxConsecutiveOnes(nums) {
+    let maxCount = 0;
+    let currentCount = 0;
+    for (let i = 0; i < nums.length; i++) { 
+        if (nums[i] === 1) {
+            currentCount++;
+        } else {
+            maxCount = Math.max(maxCount, currentCount);
+            currentCount = 0;
+        }
+    }
+    maxCount = Math.max(maxCount, currentCount);
+    return maxCount;
+}
+
+const result = findMaxConsecutiveOnes(nums);
+console.log("Maximum consecutive ones:", result);
+  
 
