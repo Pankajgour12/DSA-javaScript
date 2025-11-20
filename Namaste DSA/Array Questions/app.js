@@ -261,6 +261,28 @@ const result = missingNumber(nums);
 console.log("Missing Number is :", result);
 
 
+//! Find Numbers with Even Number of Digits
+
+ function findNumbers(nums) {
+    let count = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        let digitCount = 0;
+        let number = nums[i];
+        while (number > 0) {
+            number = Math.floor(number / 10);
+            digitCount++;
+        }
+        if (digitCount % 2 === 0) {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+const evenCount = findNumbers(nums);
+console.log("Count of numbers with even number of digits:", evenCount); 
 
 
 
