@@ -285,6 +285,33 @@ const evenCount = findNumbers(nums);
 console.log("Count of numbers with even number of digits:", evenCount); 
 
 
+//! Squares of a Sorted Array
+
+ function sortedSquares(nums) {
+
+    let n = nums.length;
+    let result = new Array(n);
+    let left = 0;
+    let right = n - 1;
+    let index = n - 1;
+    while (left <= right) {
+        if (Math.abs(nums[left]) > Math.abs(nums[right])) {
+            result[index] = nums[left] * nums[left];
+            left++;
+        } else {
+            result[index] = nums[right] * nums[right];
+            right--;
+        }
+        index--;
+    }
+    return result;
+}
+
+const squaresArray = sortedSquares(nums);
+console.log("Squares of a Sorted Array:", squaresArray);    
+
+
+ 
 
 
 
