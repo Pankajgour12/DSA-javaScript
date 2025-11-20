@@ -218,7 +218,7 @@ for (let i = 0; i < size; i++) {
   nums[i] = Number(prompt(`Enter element ${i + 1}: `));
 } 
 console.log("\nOriginal Array:", nums);
-
+/* 
 function findMaxConsecutiveOnes(nums) {
     let maxCount = 0;
     let currentCount = 0;
@@ -236,5 +236,37 @@ function findMaxConsecutiveOnes(nums) {
 
 const result = findMaxConsecutiveOnes(nums);
 console.log("Maximum consecutive ones:", result);
+   */
+
+
+//! Missing Number 
+
+
+function missingNumber(nums) {
+  let n = nums.length;
+  let sum = (n * (n + 1)) / 2;
+  let actualSum = 0;
+
+  for (let i = 0; i < n; i++) {
+    actualSum += nums[i];
+  }
+
+  return sum - actualSum;
   
+
+
+
+}
+const result = missingNumber(nums);
+console.log("Missing Number is :", result);
+
+
+
+
+
+
+
+
+
+
 
