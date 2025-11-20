@@ -128,7 +128,7 @@ console.log("Reversed String:", charArray.join('')); */
 
 //! Merge Shorted Array  
 
-const prompt = require("prompt-sync")();
+// const prompt = require("prompt-sync")();
  
 /* // Step 1: Take array input
 const size1 = Number(prompt("Enter the size of the first array: "));
@@ -209,7 +209,7 @@ console.log("Array after moving zeros:", nums);
 
 //! Max Consecutive Ones
 
-
+/* 
 // Step 1: Take array input
 const size = Number(prompt("Enter the size of the array: "));
 const nums = new Array(size);
@@ -217,7 +217,7 @@ const nums = new Array(size);
 for (let i = 0; i < size; i++) {
   nums[i] = Number(prompt(`Enter element ${i + 1}: `));
 } 
-console.log("\nOriginal Array:", nums);
+console.log("\nOriginal Array:", nums); */
 /* 
 function findMaxConsecutiveOnes(nums) {
     let maxCount = 0;
@@ -242,7 +242,7 @@ console.log("Maximum consecutive ones:", result);
 //! Missing Number 
 
 
-function missingNumber(nums) {
+/* function missingNumber(nums) {
   let n = nums.length;
   let sum = (n * (n + 1)) / 2;
   let actualSum = 0;
@@ -260,10 +260,10 @@ function missingNumber(nums) {
 const result = missingNumber(nums);
 console.log("Missing Number is :", result);
 
-
+ */
 //! Find Numbers with Even Number of Digits
 
- function findNumbers(nums) {
+/*  function findNumbers(nums) {
     let count = 0;
 
     for (let i = 0; i < nums.length; i++) {
@@ -283,10 +283,10 @@ console.log("Missing Number is :", result);
 
 const evenCount = findNumbers(nums);
 console.log("Count of numbers with even number of digits:", evenCount); 
-
+ */
 
 //! Squares of a Sorted Array
-
+/* 
  function sortedSquares(nums) {
 
     let n = nums.length;
@@ -308,13 +308,13 @@ console.log("Count of numbers with even number of digits:", evenCount);
 }
 
 const squaresArray = sortedSquares(nums);
-console.log("Squares of a Sorted Array:", squaresArray);    
+co nsole.log("Squares of a Sorted Array:", squaresArray);    
 
-
+*/
  
 
 //! Duplicate Zeros
-
+/* 
  function duplicateZeros(arr) {
     let possibleDups = 0;
     let length_ = arr.length - 1; 
@@ -345,6 +345,35 @@ const duplicatedArray = duplicateZeros(nums);
 console.log("Array after duplicating zeros:", duplicatedArray);
 
 
+ */
 
 
 
+//! Height Checker
+
+ const prompt = require("prompt-sync")();
+
+// Step 1: Take array input
+const size = Number(prompt("Enter the size of the array: "));
+const nums = new Array(size);
+
+for (let i = 0; i < size; i++) {
+  nums[i] = Number(prompt(`Enter element ${i + 1}: `));
+} 
+console.log("\nOriginal Array:", nums);
+
+
+ function heightChecker(heights) {
+    let n = heights.length;
+    let count = 0;
+    let sortedHeights = heights.slice().sort((a, b) => a - b);
+    for (let i = 0; i < n; i++) {
+        if (heights[i] !== sortedHeights[i]) {
+            count++;
+        }
+    }
+    return count;
+}
+
+const heightMismatchCount = heightChecker(nums);
+console.log("Height Mismatch Count:", heightMismatchCount);
