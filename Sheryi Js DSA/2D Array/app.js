@@ -19,3 +19,55 @@ for(let i=0; i<arr.length; i++){
         console.log("Element at arr[" + i + "][" + j + "] = " + arr[i][j])
     }
 }       
+
+
+
+//! Diagonal Sums
+
+function diagonalSums(arr){
+   
+     let primaryDiagonalSum = 0;
+    let secondaryDiagonalSum = 0;
+    
+    // Check if the array is a square matrix
+    if (arr.length === 0 || arr.some(row => row.length !== arr.length)) {
+        console.log("Cannot calculate diagonal sums for a non-square matrix.");
+        return;
+    }
+
+    for(let i = 0; i < arr.length; i++){
+        primaryDiagonalSum += arr[i][i];
+        secondaryDiagonalSum += arr[i][arr.length - 1 - i];
+    }
+
+    console.log("Primary Diagonal Sum: " + primaryDiagonalSum);
+    console.log("Secondary Diagonal Sum: " + secondaryDiagonalSum);
+    
+
+
+
+
+    
+    
+
+
+}
+
+
+console.log(diagonalSums(arr));
+
+
+     
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
