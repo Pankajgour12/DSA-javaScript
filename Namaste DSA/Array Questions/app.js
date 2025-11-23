@@ -362,7 +362,7 @@ for (let i = 0; i < size; i++) {
 } 
 console.log("\nOriginal Array:", nums);
 
-
+/* 
  function heightChecker(heights) {
     let n = heights.length;
     let count = 0;
@@ -377,3 +377,27 @@ console.log("\nOriginal Array:", nums);
 
 const heightMismatchCount = heightChecker(nums);
 console.log("Height Mismatch Count:", heightMismatchCount);
+ */
+
+
+//! Single Number
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
