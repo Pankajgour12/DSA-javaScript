@@ -58,3 +58,22 @@ Recursion is particularly useful for problems that can be broken down into small
 *   **Dynamic Programming:** Recursion with memoization is a common technique in dynamic programming.
 
 While recursion can be elegant, it's important to be mindful of its potential drawbacks, such as the risk of stack overflow and potential performance overhead compared to iterative solutions.
+
+
+## Stack Overflow
+
+A "stack overflow" is a common error that occurs when a program tries to use more memory space on the call stack than is available. The **call stack** is a special region in memory where the computer keeps track of all the functions that are currently running.
+
+When a function is called, a "stack frame" is pushed onto the top of the stack. This frame contains information about the function's local variables and the point in the code to return to when the function finishes. When the function returns, its frame is popped off the stack.
+
+### How Does it Relate to Recursion?
+
+Recursion and stack overflow are closely related because every recursive call adds a new stack frame to the call stack. If the recursion goes too deep, the stack can run out of space.
+
+This typically happens for two main reasons:
+
+1.  **No Base Case (Infinite Recursion):** If the recursive function does not have a proper base case, or if the base case is never reached, the function will call itself indefinitely. Each call adds a new frame to the stack until it overflows, causing the program to crash.
+
+2.  **Excessively Deep Recursion:** Even with a correct base case, a problem might require a very large number of recursive calls. For very large inputs, the recursion can be so deep that it exhausts the stack's memory before the base case is reached.
+
+Understanding the call stack is key to understanding recursion and avoiding stack overflow errors. Always ensure your recursive functions have a reliable base case to prevent infinite loops.
