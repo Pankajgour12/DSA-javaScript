@@ -113,8 +113,6 @@ console.log(a*parseInt(b)); // 15
 
 
 
-
-
 // Que.5
 /* 
 //Accept and print user input
