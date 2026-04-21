@@ -10,7 +10,7 @@ let x = Number(prompt("Enter number  "));
         row = row +"* "
     }
     console.log(row);
-} */
+} 
 
 
     //! Reverse the number
@@ -23,7 +23,7 @@ let rev = 0;
      rev = ( 10*rev)+ digit ;
       n = Math.floor(n/10)
  }
-     */
+     
    
 
 
