@@ -1,7 +1,7 @@
 
 //! Remove Dupticate in Sorted array 
 
-/* // Import prompt-sync so we can take input from user in VS Code terminal
+// Import prompt-sync so we can take input from user in VS Code terminal
 const prompt = require("prompt-sync")();
 
 // Step 1: Take array input
