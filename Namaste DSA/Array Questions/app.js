@@ -14,7 +14,7 @@ for (let i = 0; i < size; i++) {
 
 console.log("\nOriginal Array:", nums);
 
-// Step 2: Function to remove duplicates (LeetCode logic)
+*// Step 2: Function to remove duplicates (LeetCode logic)
 function removeDuplicates(nums) {
   // If array is empty, return 0
   if(nums.length === 0) return 0;
