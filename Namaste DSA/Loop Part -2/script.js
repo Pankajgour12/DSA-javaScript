@@ -9,6 +9,8 @@ let arr = input.split(",").map(Number);
 let x = Number(prompt("Enter element to search:"));
 
 
+
+
 function searchElement(arr, x) {
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] == x) {
