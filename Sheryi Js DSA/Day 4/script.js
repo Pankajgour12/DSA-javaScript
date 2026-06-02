@@ -1,6 +1,6 @@
 // Create a function  which accept the age and tells whether a person is eligible to vote or not.
-
-/* function checkVotingEligibility(age) {
+/* 
+ function checkVotingEligibility(age) {
   if(age <0){
     console.log("Invalid Input");
 
@@ -11,30 +11,37 @@
     console.log("Not eligible to vote");
   }  
 
-}
+ } */
+// checkVotingEligibility(20); // "Eligible to vote"
+// checkVotingEligibility(16); // "Not eligible to vote" */
 
-checkVotingEligibility(20); // "Eligible to vote"
-checkVotingEligibility(16); // "Not eligible to vote" */
-
+ 
 
 
 // Create a function to check if a number is even or odd.
 
-/* 
-function checkEvenOdd(number) {
+ 
+/* function checkEvenOdd(number) {
     if(number % 2 === 0){
         console.log("Even Number");
     }
     else{
         console.log("Odd Number");
     }
+} */
+
+/* checkEvenOdd(10); // "Even Number"
+checkEvenOdd(11); // "Odd Number"
+ */
+ 
+
+/* function checkEvenOdd (num){
+ console.log( num % 2 ===0 ?"Even Number":"odd Number");
 }
 
-checkEvenOdd(4); // "Even Number"
-checkEvenOdd(7); // "Odd Number"
-
+checkEvenOdd(11)
+checkEvenOdd(10)
  */
-
 //Loops 
 /* 
 for (let i = 0; i <= 5; i++) {
@@ -67,6 +74,8 @@ for( i=1; i<=n; i++){
 
 
 } */
+
+
 
 
 //Q. Print natural number up to n.
@@ -125,7 +134,7 @@ if(isNaN(n) || n <= 0){
 
   //Q. Factorial of a number.
 
-  let n = Number(prompt("Enter a number: "));
+/*   let n = Number(prompt("Enter a number: "));
   if(isNaN(n) || n < 0){
     console.log("Invalid Input");
   }else{
@@ -134,10 +143,42 @@ if(isNaN(n) || n <= 0){
       factorial *= i; // factorial = factorial * i
     }
     console.log("Factorial of " + n + " is: " + factorial);
-  }
+  } */
 
 
 
 
 
+// console.log(typeof []); // Object
 
+/* function checkType(value){
+  return typeof value;
+}
+
+console.log(checkType([]));; */
+/* console.log(checkType("Pankaj"));;
+console.log(checkType(null));;
+console.log(checkType(undefined));
+console.log(checkType(NaN));; */
+// console.log(checkType(false+true));
+
+// console.log((typeof([]+[])));
+
+
+/* console.log("5" + 2);
+console.log("5" - 2);
+console.log(true + " test"); */
+
+
+// console.log([] + []);
+// console.log([] + {});
+
+
+
+// console.log(Boolean(""));
+
+function toNumber(value){
+  return Number(value);
+}
+
+console.log(toNumber("pankaj"));
