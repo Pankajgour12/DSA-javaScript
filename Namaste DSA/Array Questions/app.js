@@ -1,7 +1,7 @@
 
 //! Remove Dupticate in Sorted array 
 
-/* // Import prompt-sync so we can take input from user in VS Code terminal
+// Import prompt-sync so we can take input from user in VS Code terminal
 const prompt = require("prompt-sync")();
 
 // Step 1: Take array input
@@ -12,9 +12,11 @@ for (let i = 0; i < size; i++) {
   nums[i] = Number(prompt(`Enter element ${i + 1}: `));
 }
 
+
+
 console.log("\nOriginal Array:", nums);
 
-// Step 2: Function to remove duplicates (LeetCode logic)
+*// Step 2: Function to remove duplicates (LeetCode logic)
 function removeDuplicates(nums) {
   // If array is empty, return 0
   if(nums.length === 0) return 0;
@@ -103,7 +105,7 @@ console.log("\nOriginal String:", str);
   }
  
 }*/
-/* 
+/****
 function reverseString(s) {
   let x = s.length-1;
   for(let i = 0; i<s.length/2; i++ ){

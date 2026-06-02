@@ -3,6 +3,8 @@ const prompt = require('prompt-sync')();
 
 let x = Number(prompt("Enter number  "));
 
+
+
 /* for(let i = 0; i<n ; i++ ){
     let row = " "
     for(let j=0 ; j<=i ; j++){
@@ -10,7 +12,7 @@ let x = Number(prompt("Enter number  "));
         row = row +"* "
     }
     console.log(row);
-} */
+} 
 
 
     //! Reverse the number
@@ -23,7 +25,7 @@ let rev = 0;
      rev = ( 10*rev)+ digit ;
       n = Math.floor(n/10)
  }
-     */
+     
    
 
 

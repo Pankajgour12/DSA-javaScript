@@ -7,3 +7,4 @@ for (let i = 0; i < size; i++) {
   nums[i] = Number(prompt(`Enter element ${i + 1}: `));
 } 
 console.log("\nOriginal Array:", nums);
+
